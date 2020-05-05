@@ -2,9 +2,12 @@
   <ng-container *ngFor="let event of groupedEventsMap; let i = index">
     <ng-template #tipContent>
       <ng-container *ngFor="let point of event.points">
-        <app-event 
-          [event]="point"
-        ></app-event>
+        <div class="popup-event">
+          <app-event 
+            [event]="point"
+          ></app-event>
+          <span class="popup-event__text">{{ point.time }}</span>
+        </div>
       </ng-container>
     </ng-template>
     <app-event

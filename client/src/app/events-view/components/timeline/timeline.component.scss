@@ -11,3 +11,13 @@
         transform: translateX(-20px);
     }
 }
+
+.popup-event {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+
+    &__text {
+        margin-left: 5px;
+    }
+}

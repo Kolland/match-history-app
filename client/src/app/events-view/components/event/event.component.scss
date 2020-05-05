@@ -4,19 +4,26 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    border: 1px solid #000;
+    border-width: 1px;
+    border-style: solid;
     border-radius: 50%;
     color: white;
 
     &__red {
-        background-color: red;
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
     }
 
     &__green {
-        background-color: green;
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
     }
 
     &__blue {
-        background-color: blue;
+        color: #0c5460;
+        background-color: #d1ecf1;
+        border-color: #bee5eb;
     }
 }
