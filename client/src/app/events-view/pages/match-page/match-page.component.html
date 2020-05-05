@@ -1,0 +1,5 @@
+<a type="button" class="btn btn-primary mt-4 mb-4 ml-4" [routerLink]="['../']" routerLinkActive="router-link-active" >Back</a>
+
+<ng-container *ngIf="events$ | async as events">
+  <app-timeline [events]="events"></app-timeline>
+</ng-container>

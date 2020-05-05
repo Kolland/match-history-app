@@ -1,0 +1,27 @@
+<div class="timeline" #timeline>
+  <ng-container *ngFor="let event of groupedEventsMap; let i = index">
+    <ng-template #tipContent>
+      <ng-container *ngFor="let point of event.points">
+        <app-event 
+          [event]="point"
+        ></app-event>
+      </ng-container>
+    </ng-template>
+    <app-event
+      *ngIf="event.points.length > 1; else pointWithoutTooltip"
+      class="timeline__point" 
+      [ngStyle]="{left: event.position}" 
+      [event]="event.displayPoint"
+      [ngbTooltip]="tipContent"
+      placement="bottom"
+    ></app-event>
+
+    <ng-template #pointWithoutTooltip>
+      <app-event
+        class="timeline__point" 
+        [ngStyle]="{left: event.position}" 
+        [event]="event.displayPoint"
+      ></app-event>
+    </ng-template>
+  </ng-container>
+</div>

@@ -1,0 +1,8 @@
+<div 
+  class="event" 
+  [ngClass]="{
+    'event__red': event.type === eventTypes.death,
+    'event__green': event.type === eventTypes.kill,
+    'event__blue': event.type === eventTypes.assist
+  }"
+>{{event.displayName}}</div>

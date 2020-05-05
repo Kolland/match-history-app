@@ -1,0 +1,13 @@
+.timeline {
+    display: flex;
+    align-items: center;
+    margin: 20px 30px;
+    height: 5px;
+    background-color: gray;
+    position: relative;
+
+    &__point {
+        position: absolute;
+        transform: translateX(-20px);
+    }
+}

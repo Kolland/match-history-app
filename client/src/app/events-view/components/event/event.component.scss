@@ -1,0 +1,22 @@
+.event {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    color: white;
+
+    &__red {
+        background-color: red;
+    }
+
+    &__green {
+        background-color: green;
+    }
+
+    &__blue {
+        background-color: blue;
+    }
+}

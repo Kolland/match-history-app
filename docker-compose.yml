@@ -1,0 +1,35 @@
+version: '3.1'
+
+services:
+  nginx:
+    container_name: nginx-angular
+    image: nginx-angular
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - nest
+
+  nest:
+    container_name: nest-server
+    image: nest-server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "4000:4000"
+    depends_on:
+      - nest-mongodb
+
+  nest-mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - "27018:27017"
+
+
